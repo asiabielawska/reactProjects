@@ -1,0 +1,11 @@
+$backgroundColor: rgb(145, 39, 39);
+$whiteColor: rgb(255, 255, 255);
+
+#displayFacts {
+  background-color: $backgroundColor;
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  color: $whiteColor;
+  margin-top: 10px;
+}

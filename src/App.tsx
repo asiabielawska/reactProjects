@@ -5,9 +5,11 @@ import { useState } from "react";
 function App() {
   const [inputValue, setInputValue] = useState("");
   const [arrFacts, setArrFacts] = useState<string[]>();
+
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(event.target.value);
   };
+
   const factsData = async () => {
     try {
       const response = await axios.get(
@@ -18,17 +20,19 @@ function App() {
       console.log(error);
     }
   };
-  console.log(arrFacts);
 
   return (
     <>
-      <div>
+      <h2>
         Type in the input number of the facts that you want to know about cats
-      </div>
+        and click the button
+      </h2>
       <div>
         <input value={inputValue} onChange={handleChange}></input>
       </div>
-      <button onClick={factsData}>Click me!</button>
+      <button id="displayFacts" onClick={factsData}>
+        Click me!
+      </button>
       {arrFacts && (
         <ol>
           {arrFacts.map((el, index) => (
