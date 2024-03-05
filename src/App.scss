@@ -1,11 +1,17 @@
 $backgroundColor: rgb(145, 39, 39);
-$whiteColor: rgb(255, 255, 255);
+$fontColor: rgb(255, 255, 255);
 
-#displayFacts {
-  background-color: $backgroundColor;
-  border: none;
-  padding: 10px;
-  border-radius: 20px;
-  color: $whiteColor;
-  margin-top: 10px;
+#allContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  #displayFacts {
+    background-color: $backgroundColor;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    color: $fontColor;
+    margin-top: 10px;
+    width: 100px;
+  }
 }
